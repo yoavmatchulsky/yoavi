@@ -1,0 +1,97 @@
+body {
+  background: #557a95;
+  color: white;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Roboto';
+}
+
+article {
+  height: 200px;
+  width: 600px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+}
+
+article img.me {
+  width: 200px;
+  height: 200px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+article .content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  /*background: #121212;*/
+  width: 100%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.content p {
+  margin: 0 0 .5em;
+  font-size: 16px;
+}
+
+.content p:last-of-type {
+  flex-grow: 1;
+}
+
+h1 {
+  line-height: 1;
+  margin: 0 0 .5em;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.socials {
+  /*margin-top: 10px;*/
+}
+
+.socials a {
+  text-decoration: none;
+}
+
+.socials a img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  vertical-align: top;
+}
+
+a {
+  text-decoration: underline;
+  color: white;
+}
+
+@media only screen and (max-width: 720px) {
+  article {
+    border: 0;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    padding: 0 20px;
+    height: auto;
+  }
+
+  article img.me {
+    margin: 0 auto;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+
+  article .content {
+    padding: 20px 0;
+  }
+
+  .socials {
+    margin-top: 10px;
+  }
+}
