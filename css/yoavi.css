@@ -30,7 +30,6 @@ article .content {
   display: flex;
   flex-direction: column;
   /*background: #121212;*/
-  width: 100%;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
 }
