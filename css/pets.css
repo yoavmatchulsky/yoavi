@@ -36,11 +36,12 @@ body.yoavi-pets .container {
 
 .yoavi-pets .content {
   flex-grow: 1;
+  padding: 16px 20px;
 }
 
 .yoavi-pets .content h3 {
   margin-top: 0;
-  margin-bottom: .5em;
+  margin-bottom: .15em;
 }
 
 .yoavi-pets .content p {
