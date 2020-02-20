@@ -120,3 +120,8 @@ nav ul li {
     padding-top: .5em;
   }
 }
+
+body.rtl {
+  direction: rtl;
+  unicode-bidi: normal;
+}
