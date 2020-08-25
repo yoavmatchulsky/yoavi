@@ -3,10 +3,6 @@ RewriteCond %{HTTP:X-Forwarded-SSL} !on
 RewriteCond %{REQUEST_URI} !^/(.well-known)(/|$)
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
-RewriteCond %{HTTP_HOST} ^shireats.com$ [NC,OR]
-RewriteCond %{HTTP_HOST} ^www.shireats.com$ [NC]
-RewriteRule ^(.*)$ https://www.shireats.com/$1 [R=301,L]
-
 #RewriteCond %{HTTP_HOST} !^matchulsky\.com$ [NC]
 #RewriteCond %{HTTP_HOST} !^ysky\.io$ [NC]
 RewriteCond %{HTTP_HOST} !^yoavi\.codes$ [NC]
