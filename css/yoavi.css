@@ -19,11 +19,23 @@ article {
   display: flex;
 }
 
-article img.me {
+article .me-container {
+  position: relative;
   width: 200px;
   height: 200px;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
+  overflow: hidden;
+}
+
+article img.me {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  transition: transform 0.3s ease-in-out;
+}
+
+article .me-container:hover img.me {
+  transform: scale(1.4);
 }
 
 article .content {
