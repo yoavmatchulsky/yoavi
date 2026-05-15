@@ -42,7 +42,7 @@ article img.me {
 }
 
 article .me-container:hover img.me {
-  transform: scale(1.4);
+  transform: scale(1.2);
 }
 
 article .content {

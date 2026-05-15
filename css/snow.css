@@ -1,0 +1,63 @@
+@keyframes fall {
+  from {
+    transform: translate(calc(var(--x) * 100vw), calc(var(--width) * -1 - 10px));
+  }
+  to {
+    transform: translate(calc(var(--x) * 100vw), 100vh);
+  }
+}
+
+.snow {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  --x: 0;
+  --width: 10px;
+  --time: 10s;
+  --delay: 0s;
+  --opacity: 0;
+
+  opacity: 0;
+  transition: opacity 2s;
+  &.falling {
+    opacity: 1;
+  }
+
+  i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(calc(var(--x) * 100vw), calc(var(--width) * -1));
+    animation-name: fall;
+    animation-timing-function: ease-in;
+    animation-duration: var(--duration);
+    animation-delay: calc(var(--delay) - 10s);
+    animation-iteration-count: infinite;
+    width: var(--width);
+    height: var(--width);
+    border-radius: 50%;
+    background-color: white;
+    opacity: var(--opacity);
+  }
+}
+
+.snow-play-button {
+  position: fixed;
+  left: 24px;
+  bottom: 24px;
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+  padding: 4px 8px;
+
+  &.falling {
+    border-color: white;
+    background-color: black;
+    color: white;
+  }
+}
