@@ -14,10 +14,16 @@ body {
 article {
   height: 200px;
   width: 800px;
-  border: 2px solid rgba(255,255,255,0.5);
   border-radius: 4px;
   display: flex;
   background: #5c2e27;
+  box-shadow: 0 4px 28px rgba(0, 0, 0, 0.3);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+article:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
 }
 
 article .me-container {
