@@ -1,0 +1,118 @@
+html, body {
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+
+  --l: 50%;
+  --c: 0.2;
+  --h: 180;
+  --a: 1;
+  --background-color: oklch(var(--l) var(--c) var(--h) / var(--a));
+  --opposite-color: oklch(var(--l) var(--c) mod(calc(var(--h) + 180), 360));
+
+  --white: #F7F7F5;
+  --black: #18181B;
+}
+
+.root {
+  width: 100%;
+  height: 100vh;
+  background: #B0C4DE;
+  display: grid;
+  grid-template-rows: 1fr 200px 16px 200px 1fr;
+  grid-template-columns: 1fr 400px 16px 400px 1fr;
+}
+
+dl {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  padding: 16px 0;
+  display: grid;
+  grid-template-columns: 30% 16px 1fr;
+  align-items: center;
+
+  dt {
+    grid-column: 1 / 2;
+    text-align: right;
+  }
+
+  dd {
+    margin-left: 0;
+    grid-column: 3 / 4;
+  }
+}
+
+.color-container {
+  grid-column: 2 / 5;
+  grid-row: 4 / 5;
+  background-color: var(--white);
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    background-color: var(--background-color);
+    top: 16px;
+    right: 16px;
+    bottom: 16px;
+    left: 16px;
+  }
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 90%;
+  appearance: none;
+  background: transparent;
+
+  &::-webkit-slider-runnable-track {
+    background-color: var(--black);
+    height: 4px;
+    border-radius: 8px;
+  }
+  &::-moz-range-track {
+    background-color: var(--black);
+    height: 4px;
+    border-radius: 8px;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--black);
+    cursor: pointer;
+    transform: translateY(-4px);
+  }
+  &::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--black);
+    cursor: pointer;
+    transform: translateY(-4px);
+  }
+}
+
+.color-value {
+  grid-row: 2 / 3;
+  grid-column: 4 / 5;
+  place-content: center;
+  text-align: center;
+  font-family: monospace;
+  font-size: 20px;
+}
+
+.box {
+  margin: 0;
+  background-color: var(--white);
+  color: var(--black);
+  font-weight: bold;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .9);
+}
