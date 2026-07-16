@@ -1,0 +1,35 @@
+{
+  "version": 1.1,
+  "atDirectives": [
+    {
+      "name": "@view-transition",
+      "description": "Opts the current and destination documents into cross-document view transitions.",
+      "references": [
+        {
+          "name": "MDN: @view-transition",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@view-transition"
+        }
+      ]
+    }
+  ],
+  "properties": [
+    {
+      "name": "view-transition-name",
+      "description": "Assigns a name to an element for use in a view transition.",
+      "references": [
+        {
+          "name": "MDN: view-transition-name",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/view-transition-name"
+        }
+      ]
+    },
+    {
+      "name": "navigation",
+      "description": "Controls whether the document participates in cross-document view transitions.",
+      "values": [
+        { "name": "auto" },
+        { "name": "none" }
+      ]
+    }
+  ]
+}
