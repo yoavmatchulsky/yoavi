@@ -1,5 +1,9 @@
+:root {
+  --background-color: #8b5e52;
+}
+
 body {
-  background: #8b5e52;
+  background: var(--background-color);
   color: white;
   padding: 0;
   margin: 0;
@@ -143,4 +147,68 @@ nav ul li {
 body.rtl {
   direction: rtl;
   unicode-bidi: normal;
+}
+
+
+.site-header {
+  direction: ltr;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: #5c2e27;
+  box-shadow: 0 4px 28px rgba(0, 0, 0, 0.3);
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+
+  .me-container {
+    max-height: 100%;
+
+    img {
+      max-height: 100%;
+    }
+  }
+
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+
+    h1 {
+      margin: 0;
+      font-size: 16px;
+    }
+    p {
+      margin: 0;
+      font-size: 11px;
+    }
+
+    p.description {
+      flex-grow: 1;
+    }
+  }
+
+  .socials {
+    align-self: flex-end;
+    display: flex;
+    gap: 8px;
+  }
+}
+
+body .site-header nav {
+  align-self: flex-end;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 24px;
+  margin-bottom: 0;
+  width: auto;
+  flex-grow: 1;
+
+  ul {
+    width: auto;
+    margin-bottom: 0;
+  }
 }
