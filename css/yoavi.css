@@ -162,6 +162,7 @@ body.rtl {
   display: flex;
   gap: 16px;
   padding: 16px;
+  z-index: 100;
 
   .me-container {
     max-height: 100%;
